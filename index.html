@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELS Phonics Sound Mat</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+}
+
+h1 {
+  text-align: center;
+  padding: 12px;
+  font-size: 1.5rem;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  padding: 12px;
+}
+
+.card {
+  padding: 18px 10px;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Subtle phase colours */
+.phase2 { background: #e8f4ff; }
+.phase3 { background: #e9f7ef; }
+.phase5 { background: #fff3e6; }
+
+#fullscreen {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#sound {
+  font-size: 8rem;
+  margin-bottom: 40px;
+}
+
+#home {
+  font-size: 1.5rem;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Essential Letters and Sounds</h1>
+
+<div id="grid">
+  <!-- Phase 2 -->
+  <div class="card phase2" onclick="openSound('s')">s</div>
+  <div class="card phase2" onclick="openSound('a')">a</div>
+  <div class="card phase2" onclick="openSound('t')">t</div>
+  <div class="card phase2" onclick="openSound('p')">p</div>
+  <div class="card phase2" onclick="openSound('i')">i</div>
+  <div class="card phase2" onclick="openSound('n')">n</div>
+  <div class="card phase2" onclick="openSound('m')">m</div>
+  <div class="card phase2" onclick="openSound('d')">d</div>
+  <div class="card phase2" onclick="openSound('g')">g</div>
+  <div class="card phase2" onclick="openSound('o')">o</div>
+  <div class="card phase2" onclick="openSound('c')">c</div>
+  <div class="card phase2" onclick="openSound('k')">k</div>
+  <div class="card phase2" onclick="openSound('ck')">ck</div>
+  <div class="card phase2" onclick="openSound('e')">e</div>
+  <div class="card phase2" onclick="openSound('u')">u</div>
+  <div class="card phase2" onclick="openSound('r')">r</div>
+  <div class="card phase2" onclick="openSound('h')">h</div>
+  <div class="card phase2" onclick="openSound('b')">b</div>
+  <div class="card phase2" onclick="openSound('f')">f</div>
+  <div class="card phase2" onclick="openSound('ff')">ff</div>
+  <div class="card phase2" onclick="openSound('l')">l</div>
+  <div class="card phase2" onclick="openSound('ll')">ll</div>
+  <div class="card phase2" onclick="openSound('ss')">ss</div>
+
+  <!-- Phase 3 -->
+  <div class="card phase3" onclick="openSound('j')">j</div>
+  <div class="card phase3" onclick="openSound('v')">v</div>
+  <div class="card phase3" onclick="openSound('w')">w</div>
+  <div class="card phase3" onclick="openSound('x')">x</div>
+  <div class="card phase3" onclick="openSound('y')">y</div>
+  <div class="card phase3" onclick="openSound('z')">z</div>
+  <div class="card phase3" onclick="openSound('zz')">zz</div>
+  <div class="card phase3" onclick="openSound('qu')">qu</div>
+  <div class="card phase3" onclick="openSound('ch')">ch</div>
+  <div class="card phase3" onclick="openSound('sh')">sh</div>
+  <div class="card phase3" onclick="openSound('th')">th</div>
+  <div class="card phase3" onclick="openSound('ng')">ng</div>
+  <div class="card phase3" onclick="openSound('ai')">ai</div>
+  <div class="card phase3" onclick="openSound('ee')">ee</div>
+  <div class="card phase3" onclick="openSound('igh')">igh</div>
+  <div class="card phase3" onclick="openSound('oa')">oa</div>
+  <div class="card phase3" onclick="openSound('oo')">oo</div>
+  <div class="card phase3" onclick="openSound('ar')">ar</div>
+  <div class="card phase3" onclick="openSound('or')">or</div>
+  <div class="card phase3" onclick="openSound('ur')">ur</div>
+  <div class="card phase3" onclick="openSound('ow')">ow</div>
+  <div class="card phase3" onclick="openSound('oi')">oi</div>
+  <div class="card phase3" onclick="openSound('ear')">ear</div>
+  <div class="card phase3" onclick="openSound('air')">air</div>
+  <div class="card phase3" onclick="openSound('ure')">ure</div>
+  <div class="card phase3" onclick="openSound('er')">er</div>
+
+  <!-- Phase 5 -->
+  <div class="card phase5" onclick="openSound('ay')">ay</div>
+  <div class="card phase5" onclick="openSound('ou')">ou</div>
+  <div class="card phase5" onclick="openSound('ie')">ie</div>
+  <div class="card phase5" onclick="openSound('ea')">ea</div>
+  <div class="card phase5" onclick="openSound('oy')">oy</div>
+  <div class="card phase5" onclick="openSound('ir')">ir</div>
+  <div class="card phase5" onclick="openSound('ue')">ue</div>
+  <div class="card phase5" onclick="openSound('aw')">aw</div>
+  <div class="card phase5" onclick="openSound('wh')">wh</div>
+  <div class="card phase5" onclick="openSound('ph')">ph</div>
+  <div class="card phase5" onclick="openSound('ew')">ew</div>
+  <div class="card phase5" onclick="openSound('oe')">oe</div>
+  <div class="card phase5" onclick="openSound('au')">au</div>
+  <div class="card phase5" onclick="openSound('ey')">ey</div>
+  <div class="card phase5" onclick="openSound('a-e')">a-e</div>
+  <div class="card phase5" onclick="openSound('e-e')">e-e</div>
+  <div class="card phase5" onclick="openSound('i-e')">i-e</div>
+  <div class="card phase5" onclick="openSound('o-e')">o-e</div>
+  <div class="card phase5" onclick="openSound('u-e')">u-e</div>
+</div>
+
+<div id="fullscreen">
+  <div id="sound"></div>
+  <button id="home" onclick="goHome()">🏠 Home</button>
+</div>
+
+<script>
+function openSound(text) {
+  document.getElementById('grid').style.display = 'none';
+  document.querySelector('h1').style.display = 'none';
+  document.getElementById('fullscreen').style.display = 'flex';
+  document.getElementById('sound').innerText = text;
+}
+
+function goHome() {
+  document.getElementById('fullscreen').style.display = 'none';
+  document.getElementById('grid').style.display = 'grid';
+  document.querySelector('h1').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
